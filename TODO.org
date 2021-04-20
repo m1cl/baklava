@@ -1,0 +1,22 @@
+* Menu
+
+** Single PLayer
+      AI entwickeln
+      Wahrscheinlichkeiten
+      berechnen http://www.brefeld.homepage.t-online.de/kniffel.html
+
+** Multiplayer
+      docker-compose
+      https://heroiclabs.com/docs/install-docker-quickstart/
+      
+** Lobby
+      Nakama establish connect:
+
+            var client = new nakamajs.Client("defaultkey", "127.0.0.1", 7350);
+            client.ssl = false;
+
+      https://heroiclabs.com/docs/social-friends/
+** Option
+      Musik an/aus
+      # parallel https://github.com/GoogleChromeLabs/comlink
+
