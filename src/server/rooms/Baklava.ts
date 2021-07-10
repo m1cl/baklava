@@ -5,11 +5,12 @@ export class Baklava extends Room {
   onCreate(options: any) {
     this.setState(new MyRoomState());
 
-    this.onMessage("keydown", (client, message) => {
+    this.onMessage("message", (client, message) => {
       //
       // handle "type" message
       //
-      this.broadcast("keydown", message, {
+      console.log(client.id, ": ", message);
+      this.broadcast("message", client.id + ": " + message, {
         except: client,
       });
     });

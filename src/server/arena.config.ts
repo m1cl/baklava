@@ -1,4 +1,5 @@
 import Arena from "@colyseus/arena";
+import { RelayRoom } from "colyseus";
 import { monitor } from "@colyseus/monitor";
 import { Request, Response } from "express";
 import { Baklava } from "./rooms/Baklava";
@@ -14,7 +15,16 @@ export default Arena({
     /**
      * Define your room handlers:
      */
-    gameServer.define("baklava", Baklava);
+    gameServer.define("chat", Baklava).on("message", (msg) => {
+      console.log("THE MESSAGE", msg);
+    });
+
+    gameServer.define("game", Baklava);
+
+    // gameServer.define("relay_room", RelayRoom, {
+    //   maxClients: 4,
+    //   allowReconnectionTime: 120,
+    // });
   },
 
   initializeExpress: (app) => {

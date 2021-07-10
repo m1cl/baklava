@@ -48,8 +48,10 @@
     "express": "^4.17.1",
     "express-jwt": "^6.0.0",
     "phaser": "^3.50.0",
+    "react": "^17.0.2",
     "regenerator-runtime": "^0.13.7",
     "ts-loader": "^8.1.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "winbox-react": "^1.0.4"
   }
 }
